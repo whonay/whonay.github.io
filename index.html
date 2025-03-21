@@ -9,7 +9,8 @@
    <script>
 function aggiornaTesto() {
   var el = document.getElementById('testotesto');
-  el.innerHTML = "Pesto di trova";
+  if(el.innerHTML == "Pesto di trova") el.innerHTML = "Testo di prova";
+   if(el.innerHTML == "Testo di prova") el.innerHTML = "Pesto di trova";
 }
 </script>
 </head>
