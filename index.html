@@ -13,10 +13,83 @@ function aggiornaTesto() {
 else if(el.innerHTML == "Testo di prova") el.innerHTML = "Pesto di trova";
 }
 </script>
+   <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+</script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
 </head>
 
 <body>
 <div id="contenitore">
+
+   \documentclass{article}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=false,
+    linkcolor=false,
+    filecolor=false,      
+    urlcolor=false,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\title{Test di \LaTeX \space del Laboratorio di Introduzione alla Matematica Computazionale}
+\author{Edoardo Balistri \\ \href{mailto:e.balistri@studenti.unipi.it}{\textbf{e.balistri@studenti.unipi.it}}}
+\date{Anno Accademico 2024-2025}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{definizione}{Definizione}[section]
+\newtheorem{lemma}{Lemma}[section]
+\begin{document}
+\maketitle
+\section{Teorema del Laboratorio}
+\subsection{L'enunciato classico}
+
+Scopo di queste note \`e dimostrare in modo formale un risultato noto in letteratura come \emph{Teorema del Laboratorio}. Si tratta di un risultato che ha un ruolo fondamentale nella trattazione analitica di alcuni problemi di Cauchy, come il seguente:
+\begin{equation} 
+\begin{cases}
+\frac{dv(x)}{dx}=\frac{2 \sinh{v(x)}}{1+x^2} \\
+v(0)=0
+\end{cases}
+.
+\label{eq:prima}
+\end{equation}
+
+La formulazione classica del risultato viene data in forma integrale, ed \`e la seguente:
+\begin{equation} 
+\int_0^1{\frac{x^{n-1}+x^{x-\frac{1}{3}}-2x^{2n-1}}{1-x}}\ dx=2\ln(2)
+.
+\label{eq:seconda}
+\end{equation}
+
+La dimostrazione non \`e del tutto banale, e segue dalla considerazioni fatte nella sezione \ref{sec}. La dimostrazione completa viene lasciata come esercizio al lettore volenteroso.
+
+\subsection{Determinanti e prodotti} \label{sec}
+Per rappresentare in modo efficace le soluzioni dell'equazione \eqref{eq:prima}, \`e necessario osservare che alcune identit\`a, come la seguente:
+\begin{equation}
+ze^{\gamma z} \prod_{k+1}^\infty \left (1+\frac{z}{n} \right )e^{-\frac{z}{n}}=\frac{1}{\Gamma(z)}
+,
+\label{eq:terza}
+\end{equation}
+possono essere ricavate scrivendo la produttoria come limite di determinante di matrici $n \times n$, per $n \rightarrow \infty$. Ad esempio, per l'identit\`a sopra \`e utile dimostrare la seguente uguaglianza:
+\begin{equation}\det 
+\begin{pmatrix}
+20 & 20 & 2 \\ 20 & 7 & 7\\ 2 & 2 & 20
+\end{pmatrix}=-5148
+.
+\end{equation}
+Applicando il logaritmo ad entrambi i termini dell'equazione \eqref{eq:terza} \`e possibile trasformare il prodotto (qualora i termini fossero positivi) in una serie, come la seguente
+\[\sum_{k=0}^\infty \frac{1}{k!(k+n)!}=I_n(2),\]
+e dunque riformulare il problema in modo diverso, e a volte pi\`u semplice da trattare. Questa osservazione si pu\`o usare per dimostrare la seguente identit\`a,
+\[\varphi \space : \space t \space \in \space V \longmapsto g \space \in \space \Omega,\]
+che a sua volta implica banalmente \eqref{eq:seconda}.
+\end{document}
    <div id="testotesto">Testo di prova</div>
    <button onclick="aggiornaTesto();">Cambia testo</button>
    <img src="folder.jpg" width=500px height=500px > <br>
