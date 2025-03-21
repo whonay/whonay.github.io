@@ -1,0 +1,20 @@
+/* Questa regola si applica a tutti i tag body, anche se in ogni 
+   documento ne appare uno solo, e ci permette di impostare lo
+   sfondo. */
+body {
+    background-color: red;
+}
+
+/* La sintassi con il punto permette di identificare tutti i
+ * comandi che hanno una certa classe specificata. In questo
+ * caso impostiamo il colore del testo. */
+.verde {
+    color: green;
+}
+
+/* Infine, possiamo selezionare il tag con un certo ID utilizzando
+ * il simbolo del cancelletto. Ora impostiamo della spaziatura. */
+#principale {
+    margin-left: 20px;
+    margin-right: 20px;
+}
