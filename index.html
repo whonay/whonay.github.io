@@ -6,9 +6,17 @@
    <title>La mia pagina</title>
    <link rel="stylesheet" type="text/css" href="stile.css" />
    <script> alert("ebesfenomegacorona") </script>
+   <script>
+function aggiornaTesto() {
+  var el = document.getElementById('test');
+  el.innerHTML = "Pesto di trova";
+}
+</script>
 </head>
 
 <body>
+   <div id="testotesto"> Testo di prova </div>
+   <button onclick="aggiornaTesto();">Cambia testo</button>
 <div id="contenitore">
     <img src="folder.jpg" width=500px height=500px > <br>
 
